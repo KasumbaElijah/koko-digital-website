@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 244, 244, 245;
+  --background-start-rgb: 21, 18, 22;
+  --background-end-rgb: 21, 18, 22;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #151216;
+  overflow-x: hidden;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #151216;
+}
+::-webkit-scrollbar-thumb {
+  background: #362d3a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
