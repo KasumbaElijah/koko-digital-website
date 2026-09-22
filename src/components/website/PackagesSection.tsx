@@ -82,7 +82,7 @@ export function PackagesSection() {
   };
 
   return (
-    <section id="packages" className="py-24 bg-[#0d0d11] relative">
+    <section id="packages" className="py-24 bg-[#0d0d11] relative scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

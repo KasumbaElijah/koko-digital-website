@@ -101,7 +101,11 @@ export function Footer() {
                   <span>Social Analytics Portal</span>
                 </Link>
               </li>
-              <li><Link href="/settings" className="hover:text-red-400 transition-colors">OAuth Integrations</Link></li>
+              <li>
+                <Link href="/dashboard" className="hover:text-red-400 transition-colors">
+                  OAuth Integrations & API
+                </Link>
+              </li>
               <li><Link href="/privacy" className="hover:text-red-400 transition-colors">Privacy Policy</Link></li>
               <li><a href="#contact" className="hover:text-red-400 transition-colors">Book a Strategy Shoot</a></li>
             </ul>

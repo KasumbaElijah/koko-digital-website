@@ -12,8 +12,16 @@ export function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileMenuOpen(false);
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   const navLinks = [
@@ -122,43 +130,49 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer & Backdrop Overlay */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#151216]/98 border-b border-red-950/60 px-6 py-6 space-y-4 backdrop-blur-xl animate-in slide-in-from-top-2 duration-200">
-          <div className="flex flex-col space-y-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
+        <>
+          <div
+            className="fixed inset-0 top-[65px] bg-black/70 backdrop-blur-sm z-40 md:hidden animate-fade-in"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          <div className="relative z-50 md:hidden bg-[#151216] border-b border-red-950/60 px-6 py-6 space-y-4 shadow-2xl animate-slide-down">
+            <div className="flex flex-col space-y-2">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm font-semibold text-zinc-300 hover:text-red-400 py-2.5 border-b border-zinc-900 flex items-center justify-between transition-colors"
+                >
+                  <span>{link.name}</span>
+                  <ChevronRight className="w-4 h-4 text-zinc-600" />
+                </a>
+              ))}
+            </div>
+
+            <div className="pt-2 flex flex-col gap-2.5">
+              <Link
+                href="/dashboard"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-semibold text-zinc-300 hover:text-red-400 py-2 border-b border-zinc-900 flex items-center justify-between"
+                className="w-full py-2.5 rounded-xl text-center text-xs font-semibold text-zinc-200 bg-[#16161b] hover:bg-zinc-800/80 border border-zinc-800 flex items-center justify-center gap-2 transition-all"
               >
-                <span>{link.name}</span>
-                <ChevronRight className="w-4 h-4 text-zinc-600" />
+                <BarChart3 className="w-4 h-4 text-red-500" />
+                <span>Access Client Analytics Portal</span>
+              </Link>
+
+              <a
+                href="#contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-3 rounded-xl text-center text-xs font-bold text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 shadow-lg shadow-red-700/40 flex items-center justify-center gap-2 transition-all active:scale-95"
+              >
+                <span>Book a Discovery Shoot</span>
+                <ArrowRight className="w-4 h-4" />
               </a>
-            ))}
+            </div>
           </div>
-
-          <div className="pt-2 flex flex-col gap-2.5">
-            <Link
-              href="/dashboard"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-2.5 rounded-xl text-center text-xs font-semibold text-zinc-200 bg-[#16161b] border border-zinc-800 flex items-center justify-center gap-2"
-            >
-              <BarChart3 className="w-4 h-4 text-red-500" />
-              <span>Access Client Analytics Portal</span>
-            </Link>
-
-            <a
-              href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3 rounded-xl text-center text-xs font-bold text-white bg-gradient-to-r from-red-600 to-red-700 shadow-lg shadow-red-700/40 flex items-center justify-center gap-2"
-            >
-              <span>Book a Discovery Shoot</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
+        </>
       )}
     </header>
   );

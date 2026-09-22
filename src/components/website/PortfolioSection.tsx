@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sparkles, Eye, TrendingUp, ArrowUpRight, CheckCircle2, Play, Flame, X } from 'lucide-react';
 
 interface CaseStudy {
@@ -159,13 +159,34 @@ export function PortfolioSection() {
   const [activeTab, setActiveTab] = useState<string>('all');
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
 
+  // Close modal on Escape key and prevent background scroll when open
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedCaseStudy(null);
+      }
+    };
+
+    if (selectedCaseStudy) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedCaseStudy]);
+
   const filteredStudies =
     activeTab === 'all'
       ? CASE_STUDIES
       : CASE_STUDIES.filter((item) => item.category === activeTab);
 
   return (
-    <section id="work" className="py-24 bg-[#18141a] relative">
+    <section id="work" className="py-24 bg-[#18141a] relative scroll-mt-24">
       {/* Decorative Red Accent Lines */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-red-900/50 to-transparent" />
 
@@ -274,8 +295,14 @@ export function PortfolioSection() {
 
         {/* Deep Dive Case Study Modal */}
         {selectedCaseStudy && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-            <div className="relative w-full max-w-2xl bg-[#1f1a23] border border-red-800/60 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-red-950/60 max-h-[90vh] overflow-y-auto">
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in cursor-pointer"
+            onClick={() => setSelectedCaseStudy(null)}
+          >
+            <div
+              className="relative w-full max-w-2xl bg-[#1f1a23] border border-red-800/60 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-red-950/60 max-h-[90vh] overflow-y-auto animate-scale-up cursor-default"
+              onClick={(e) => e.stopPropagation()}
+            >
               
               {/* Close Button */}
               <button

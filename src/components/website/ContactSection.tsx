@@ -52,7 +52,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#151216] relative overflow-hidden">
+    <section id="contact" className="py-24 bg-[#151216] relative overflow-hidden scroll-mt-24">
       {/* Red ambient lighting */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-red-700/10 blur-[140px] pointer-events-none rounded-full" />
 

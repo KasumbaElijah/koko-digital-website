@@ -98,7 +98,7 @@ const SERVICES: ServiceItem[] = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-24 bg-[#151216] relative overflow-hidden">
+    <section id="services" className="py-24 bg-[#151216] relative overflow-hidden scroll-mt-24">
       {/* Red ambient background glow */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-red-700/10 blur-[130px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-950/20 blur-[130px] pointer-events-none rounded-full" />

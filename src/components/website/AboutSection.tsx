@@ -32,7 +32,7 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-[#18141a] relative overflow-hidden">
+    <section id="about" className="py-24 bg-[#18141a] relative overflow-hidden scroll-mt-24">
       {/* Background Red Ambient Glow */}
       <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-red-800/10 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 left-0 w-[400px] h-[400px] bg-red-950/20 blur-[140px] pointer-events-none rounded-full" />
@@ -142,7 +142,7 @@ export function AboutSection() {
         </div>
 
         {/* Official Studio Hiring Spotlight — Directly from the Studio Poster */}
-        <div id="careers" className="rounded-3xl bg-gradient-to-br from-[#2f1c18] via-[#241c21] to-[#1c161a] border-2 border-red-900/60 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        <div id="careers" className="rounded-3xl bg-gradient-to-br from-[#2f1c18] via-[#241c21] to-[#1c161a] border-2 border-red-900/60 p-8 sm:p-12 shadow-2xl relative overflow-hidden scroll-mt-24">
           {/* Ambient Lighting Accents */}
           <div className="absolute top-0 right-16 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-10 w-64 h-64 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
