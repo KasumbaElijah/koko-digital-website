@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ShieldCheck, Lock, Eye, FileText } from 'lucide-react';
+import { assetPath } from '@/lib/utils';
 
 export default function PrivacyPolicyPage() {
   return (
@@ -19,7 +20,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="flex items-center gap-2.5">
           <img
-            src="/images/koko-avatar.png"
+            src={assetPath('/images/koko-avatar.png')}
             alt="Koko Digital"
             className="w-7 h-7 rounded-full border border-white/20"
           />

@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowUp, Instagram, Facebook, Linkedin, BarChart3 } from 'lucide-react';
+import { assetPath } from '@/lib/utils';
 
 export function Footer() {
   const scrollToTop = () => {
@@ -21,13 +22,13 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3.5 group">
               <img
-                src="/images/koko-avatar.png"
+                src={assetPath('/images/koko-avatar.png')}
                 alt="Koko Digital Studio"
                 className="w-10 h-10 rounded-full shadow-md shadow-black/40 border border-white/10 group-hover:scale-105 transition-transform shrink-0"
               />
               <div>
                 <img
-                  src="/images/koko-logo-white.png"
+                  src={assetPath('/images/koko-logo-white.png')}
                   alt="KOKO"
                   className="h-6 w-auto object-contain mb-1"
                 />

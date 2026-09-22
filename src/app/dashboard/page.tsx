@@ -19,6 +19,7 @@ import {
   Clock,
   ArrowUpRight,
 } from 'lucide-react';
+import { assetPath } from '@/lib/utils';
 
 interface ClientMetric {
   id: string;
@@ -113,7 +114,7 @@ export default function ClientDashboardPage() {
 
           <div className="flex items-center gap-2.5">
             <img
-              src="/images/koko-avatar.png"
+              src={assetPath('/images/koko-avatar.png')}
               alt="Koko Digital"
               className="w-7 h-7 rounded-full border border-white/20"
             />
@@ -317,7 +318,7 @@ export default function ClientDashboardPage() {
                 <div className="p-3.5 rounded-2xl bg-[#221c25] border border-[#382e3e] flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <img
-                      src="/images/koko-logo-black.png"
+                      src={assetPath('/images/koko-logo-black.png')}
                       alt="PDF"
                       className="w-8 h-8 rounded-xl bg-white p-1 object-contain shrink-0"
                     />
@@ -338,7 +339,7 @@ export default function ClientDashboardPage() {
                 <div className="p-3.5 rounded-2xl bg-[#221c25] border border-[#382e3e] flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <img
-                      src="/images/koko-logo-black.png"
+                      src={assetPath('/images/koko-logo-black.png')}
                       alt="PDF"
                       className="w-8 h-8 rounded-xl bg-white p-1 object-contain shrink-0"
                     />

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ArrowRight, BarChart3, Sparkles, ChevronRight } from 'lucide-react';
+import { assetPath } from '@/lib/utils';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -47,7 +48,7 @@ export function Navbar() {
           {/* Official White Koko Avatar Badge (matching footer) with active live pulse indicator */}
           <div className="relative shrink-0">
             <img
-              src="/images/koko-avatar.png"
+              src={assetPath('/images/koko-avatar.png')}
               alt="Koko Digital Studio"
               className="w-10 h-10 rounded-full shadow-md shadow-black/40 border border-white/10 group-hover:scale-105 transition-transform shrink-0"
             />
@@ -61,7 +62,7 @@ export function Navbar() {
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
               <img
-                src="/images/koko-logo-white.png"
+                src={assetPath('/images/koko-logo-white.png')}
                 alt="KOKO"
                 className="h-5 w-auto object-contain"
               />

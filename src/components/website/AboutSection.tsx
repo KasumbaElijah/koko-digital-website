@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { MapPin, Award, Flame, Heart, Compass, ShieldCheck, Sparkles } from 'lucide-react';
+import { assetPath } from '@/lib/utils';
 
 export function AboutSection() {
   const teamValues = [
@@ -81,12 +82,12 @@ export function AboutSection() {
             <div className="p-8 rounded-3xl bg-gradient-to-b from-red-950/40 via-[#221d25] to-[#1c1720] border-2 border-red-800/40 shadow-2xl relative">
               <div className="mb-6 flex items-center gap-3">
                 <img
-                  src="/images/koko-avatar.png"
+                  src={assetPath('/images/koko-avatar.png')}
                   alt="Koko Digital Studio"
                   className="w-12 h-12 rounded-2xl shadow-lg shadow-red-700/30 border border-white/10"
                 />
                 <img
-                  src="/images/koko-logo-white.png"
+                  src={assetPath('/images/koko-logo-white.png')}
                   alt="KOKO"
                   className="h-6 w-auto object-contain"
                 />
@@ -155,7 +156,7 @@ export function AboutSection() {
               </div>
               <div className="flex flex-col items-end">
                 <img
-                  src="/images/koko-logo-white.png"
+                  src={assetPath('/images/koko-logo-white.png')}
                   alt="KOKO"
                   className="h-5 w-auto object-contain mb-1"
                 />

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Video, Smartphone, Layers, GraduationCap, BarChart3, Sparkles, ArrowRight, Check } from 'lucide-react';
+import { assetPath } from '@/lib/utils';
 
 interface ServiceItem {
   id: string;
@@ -185,12 +186,12 @@ export function ServicesSection() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <img
-                  src="/images/koko-avatar.png"
+                  src={assetPath('/images/koko-avatar.png')}
                   alt="Koko Digital Studio"
                   className="w-12 h-12 rounded-2xl shadow-lg shadow-red-700/30 border border-white/10"
                 />
                 <img
-                  src="/images/koko-logo-white.png"
+                  src={assetPath('/images/koko-logo-white.png')}
                   alt="KOKO"
                   className="h-5 w-auto object-contain"
                 />
