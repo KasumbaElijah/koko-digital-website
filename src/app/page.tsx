@@ -18,7 +18,7 @@ export const metadata = {
     title: 'Koko Digital Studio | We Make Brands Impossible to Ignore',
     description:
       'Short-form video production, social media management, brand storytelling, and creator masterclasses in Kampala and Nairobi.',
-    url: 'https://kokodigital.studio',
+    url: 'https://kokodigitalstudio.com',
     siteName: 'Koko Digital Studio',
     type: 'website',
   },

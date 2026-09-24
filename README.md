@@ -9,12 +9,12 @@
   East Africa’s premier short-form video production, social media management, and creative storytelling agency — based in **Kampala, Uganda** & **Nairobi, Kenya**.
 
   [![Deploy Next.js to GitHub Pages](https://github.com/KasumbaElijah/koko-digital-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/KasumbaElijah/koko-digital-website/actions/workflows/deploy.yml)
-  [![Live Site](https://img.shields.io/badge/Live%20Website-GitHub%20Pages-ef4444?style=flat&logo=github)](https://kasumbaelijah.github.io/koko-digital-website/)
+  [![Live Site](https://img.shields.io/badge/Live%20Website-kokodigitalstudio.com-ef4444?style=flat&logo=safari)](https://kokodigitalstudio.com/)
   [![Next.js](https://img.shields.io/badge/Next.js-14.2.15-black?style=flat&logo=next.js)](https://nextjs.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.14-38bdf8?style=flat&logo=tailwindcss)](https://tailwindcss.com/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-3178c6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 
-  [**🌐 Explore Live Website**](https://kasumbaelijah.github.io/koko-digital-website/) • [**📊 Client Portal Preview**](https://kasumbaelijah.github.io/koko-digital-website/dashboard/) • [**🛡️ Privacy Policy**](https://kasumbaelijah.github.io/koko-digital-website/privacy/)
+  [**🌐 Explore Live Website (kokodigitalstudio.com)**](https://kokodigitalstudio.com/) • [**📊 Client Portal Preview**](https://kokodigitalstudio.com/dashboard/) • [**🛡️ Privacy Policy**](https://kokodigitalstudio.com/privacy/)
 
 </div>
 
@@ -128,7 +128,7 @@ Deployment is completely automated through **GitHub Actions** ([`.github/workflo
 
 ## 🔗 Official Channels & Links
 
-* 🌐 **Live Website**: [https://kasumbaelijah.github.io/koko-digital-website/](https://kasumbaelijah.github.io/koko-digital-website/)
+* 🌐 **Live Website**: [https://kokodigitalstudio.com/](https://kokodigitalstudio.com/)
 * 📸 **Instagram**: [@koko_digital_studio](https://www.instagram.com/koko_digital_studio/?hl=en)
 * 🎵 **TikTok**: [@koko_digital_studios](https://www.tiktok.com/@koko_digital_studios)
 * 💼 **LinkedIn**: [Koko Digital Studios](https://www.linkedin.com/company/koko-digital-studios/home/)
