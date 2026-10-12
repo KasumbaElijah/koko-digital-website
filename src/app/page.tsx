@@ -14,6 +14,17 @@ export const metadata = {
   title: 'Koko Digital Studio | We Make Brands Impossible to Ignore',
   description:
     'East Africa’s premier short-form video production and social media management agency. We craft viral 9:16 reels, TikToks, and value-first creative strategies that scale brands across Uganda and Kenya.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '256x256' },
+      { url: '/images/koko-avatar.png', type: 'image/png', sizes: '256x256' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Koko Digital Studio | We Make Brands Impossible to Ignore',
     description:
