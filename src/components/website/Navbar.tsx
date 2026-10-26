@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowRight, BarChart3, Sparkles, ChevronRight } from 'lucide-react';
+import { Menu, X, ArrowRight, BarChart3, Sparkles, ChevronRight, Calendar, Phone } from 'lucide-react';
 import { assetPath } from '@/lib/utils';
 
 export function Navbar() {
@@ -101,12 +101,15 @@ export function Navbar() {
             <span>Client Portal</span>
           </Link>
 
-          {/* Book Discovery Call CTA */}
+          {/* Book Discovery Meeting CTA (Calendly) */}
           <a
-            href="#contact"
-            className="relative group overflow-hidden flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-500 hover:to-red-600 shadow-md shadow-red-700/30 hover:shadow-red-600/50 transition-all active:scale-95"
+            href="https://calendly.com/akankundavannessa7/koko-digital-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group overflow-hidden flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-red-600 shadow-md shadow-red-700/30 hover:shadow-red-600/50 transition-all active:scale-95"
           >
-            <span>Book a Shoot</span>
+            <Calendar className="w-3.5 h-3.5" />
+            <span>Book Discovery Call</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </a>
         </div>
@@ -154,23 +157,35 @@ export function Navbar() {
             </div>
 
             <div className="pt-2 flex flex-col gap-2.5">
+              <a
+                href="https://calendly.com/akankundavannessa7/koko-digital-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-3 rounded-xl text-center text-xs font-bold text-white bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-red-600 shadow-lg shadow-red-700/40 flex items-center justify-center gap-2 transition-all active:scale-95"
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Book a Discovery Meeting (Calendly)</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+
+              <a
+                href="tel:+256790654575"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-2.5 rounded-xl text-center text-xs font-bold text-zinc-200 bg-[#1b171e] hover:bg-zinc-800 border border-[#3e3445] flex items-center justify-center gap-2 transition-all"
+              >
+                <Phone className="w-3.5 h-3.5 text-red-400" />
+                <span>Call Studio: +256 790 654575</span>
+              </a>
+
               <Link
                 href="/dashboard"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-2.5 rounded-xl text-center text-xs font-semibold text-zinc-200 bg-[#16161b] hover:bg-zinc-800/80 border border-zinc-800 flex items-center justify-center gap-2 transition-all"
+                className="w-full py-2.5 rounded-xl text-center text-xs font-semibold text-zinc-300 bg-[#141418] hover:bg-zinc-800/80 border border-zinc-800 flex items-center justify-center gap-2 transition-all"
               >
                 <BarChart3 className="w-4 h-4 text-red-500" />
                 <span>Access Client Analytics Portal</span>
               </Link>
-
-              <a
-                href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-3 rounded-xl text-center text-xs font-bold text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 shadow-lg shadow-red-700/40 flex items-center justify-center gap-2 transition-all active:scale-95"
-              >
-                <span>Book a Discovery Shoot</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
             </div>
           </div>
         </>

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Check, Sparkles, Zap, Shield, ArrowRight } from 'lucide-react';
+import { Check, Sparkles, Zap, Shield, ArrowRight, Calendar, Phone } from 'lucide-react';
 
 interface PricingTier {
   id: string;
@@ -220,6 +220,36 @@ export function PackagesSection() {
                 </button>
               );
             })}
+          </div>
+        </div>
+
+        {/* Discovery Meeting Banner */}
+        <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-red-950/60 via-[#201923] to-[#161218] border border-red-800/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+          <div className="space-y-1 text-center md:text-left">
+            <h4 className="text-base sm:text-lg font-bold text-white font-serif">
+              Not sure which package fits your current growth stage?
+            </h4>
+            <p className="text-xs text-zinc-300">
+              Schedule a 20-minute discovery consultation with our creative directors to discuss custom deliverables, pricing, and campaign timelines.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full md:w-auto">
+            <a
+              href="https://calendly.com/akankundavannessa7/koko-digital-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto py-3 px-5 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white text-xs font-bold shadow-lg shadow-red-700/40 flex items-center justify-center gap-2 transition-all active:scale-95"
+            >
+              <Calendar className="w-4 h-4" />
+              <span>Book Discovery Meeting</span>
+            </a>
+            <a
+              href="tel:+256790654575"
+              className="w-full sm:w-auto py-3 px-4 rounded-xl bg-[#2a2430] hover:bg-zinc-800 border border-[#3d3344] text-zinc-200 text-xs font-bold flex items-center justify-center gap-2 transition-all font-mono"
+            >
+              <Phone className="w-3.5 h-3.5 text-red-400" />
+              <span>+256 790 654575</span>
+            </a>
           </div>
         </div>
 

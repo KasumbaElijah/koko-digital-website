@@ -108,26 +108,50 @@ export function Footer() {
                 </Link>
               </li>
               <li><Link href="/privacy" className="hover:text-red-400 transition-colors">Privacy Policy</Link></li>
-              <li><a href="#contact" className="hover:text-red-400 transition-colors">Book a Strategy Shoot</a></li>
+              <li>
+                <a
+                  href="https://calendly.com/akankundavannessa7/koko-digital-meeting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-red-300 text-red-400 font-semibold transition-colors flex items-center gap-1"
+                >
+                  <span>Book Discovery Meeting</span>
+                  <span className="text-[10px]">↗</span>
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Col 5: Studios */}
           <div className="space-y-3">
             <p className="text-xs font-bold text-white uppercase tracking-wider font-serif">
-              Locations
+              Locations & Contact
             </p>
             <div className="text-xs text-zinc-400 space-y-2 leading-relaxed">
               <div>
                 <p className="font-semibold text-white">Kampala Studio HQ</p>
                 <p className="text-zinc-500">Kololo / Greater Kampala, Uganda</p>
               </div>
-              <div className="pt-2">
+              <div className="pt-1">
                 <p className="font-semibold text-white">Nairobi Creative Hub</p>
                 <p className="text-zinc-500">Nairobi, Kenya</p>
               </div>
-              <div className="pt-2">
-                <p className="font-semibold text-white">Direct Inquiries</p>
+              <div className="pt-1.5 border-t border-zinc-900/80">
+                <p className="font-semibold text-white">Direct Phone & WhatsApp</p>
+                <a href="tel:+256790654575" className="text-zinc-200 hover:text-red-400 font-mono block">
+                  +256 790 654575
+                </a>
+                <a
+                  href="https://wa.me/256790654575?text=Hi%20Koko%20Digital,%20I'd%20like%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:underline text-[11px] block mt-0.5"
+                >
+                  WhatsApp: +256 790 654575
+                </a>
+              </div>
+              <div className="pt-1">
+                <p className="font-semibold text-white">Email Inquiries</p>
                 <a href="mailto:kokodigitalstudios@gmail.com" className="text-red-400 hover:underline">
                   kokodigitalstudios@gmail.com
                 </a>

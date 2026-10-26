@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Play, Pause, Volume2, Sparkles, TrendingUp, Heart, MessageCircle, Share2, Flame, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Play, Pause, Volume2, Sparkles, TrendingUp, Heart, MessageCircle, Share2, Flame, ArrowRight, CheckCircle2, Calendar, Phone } from 'lucide-react';
 
 interface MockReel {
   id: string;
@@ -147,10 +147,13 @@ export function HeroSection() {
             {/* Call to Actions */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <a
-                href="#contact"
-                className="w-full sm:w-auto px-7 py-4 rounded-2xl text-sm font-bold text-white bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-500 hover:to-red-600 shadow-xl shadow-red-700/35 hover:shadow-red-600/60 hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2.5 group active:scale-95"
+                href="https://calendly.com/akankundavannessa7/koko-digital-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-7 py-4 rounded-2xl text-sm font-bold text-white bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-red-600 shadow-xl shadow-red-700/35 hover:shadow-red-600/60 hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2.5 group active:scale-95"
               >
-                <span>Book a Discovery Shoot</span>
+                <Calendar className="w-4 h-4" />
+                <span>Book a Discovery Meeting</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-200" />
               </a>
 
@@ -159,6 +162,29 @@ export function HeroSection() {
                 className="w-full sm:w-auto px-7 py-4 rounded-2xl text-sm font-bold text-zinc-200 hover:text-white bg-[#141418] hover:bg-zinc-800/90 border border-zinc-800 hover:border-red-700/60 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <span>Explore Client Work</span>
+              </a>
+            </div>
+
+            {/* Quick Contact Bar */}
+            <div className="flex items-center justify-center lg:justify-start gap-3 text-xs text-zinc-400">
+              <span className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                Direct Studio Line:
+              </span>
+              <a
+                href="tel:+256790654575"
+                className="font-mono font-bold text-zinc-200 hover:text-red-400 transition-colors"
+              >
+                +256 790 654575
+              </a>
+              <span className="text-zinc-600">•</span>
+              <a
+                href="https://wa.me/256790654575?text=Hi%20Koko%20Digital,%20I'd%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-400 hover:text-emerald-300 underline font-medium"
+              >
+                WhatsApp Us
               </a>
             </div>
 

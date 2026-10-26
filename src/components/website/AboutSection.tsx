@@ -270,6 +270,15 @@ export function AboutSection() {
                   kokodigitalstudios@gmail.com
                 </a>
               </div>
+              <div>
+                <span>Studio Line / WhatsApp: </span>
+                <a
+                  href="tel:+256790654575"
+                  className="font-bold font-mono text-white hover:text-red-400"
+                >
+                  +256 790 654575
+                </a>
+              </div>
             </div>
 
           </div>

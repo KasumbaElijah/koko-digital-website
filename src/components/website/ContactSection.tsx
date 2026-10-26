@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, CheckCircle2, Sparkles, ArrowRight, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, CheckCircle2, Sparkles, ArrowRight, Instagram, Linkedin, Calendar, Clock } from 'lucide-react';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -78,37 +78,120 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Direct Contacts & Studio Info */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-6">
             
-            {/* Quick WhatsApp Action Box */}
-            <div className="p-8 rounded-3xl bg-gradient-to-br from-red-950/70 via-[#261f28] to-[#1c1720] border-2 border-red-600/50 shadow-2xl relative">
+            {/* 1. Calendly Discovery Meeting Action Box */}
+            <div className="p-8 rounded-3xl bg-gradient-to-br from-red-950/80 via-[#261c24] to-[#1c151e] border-2 border-red-500/60 shadow-2xl relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-red-600/10 rounded-full blur-2xl pointer-events-none" />
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center">
-                  <MessageSquare className="w-5 h-5" />
+                <div className="w-11 h-11 rounded-2xl bg-red-600 text-white flex items-center justify-center shadow-lg shadow-red-700/40">
+                  <Calendar className="w-5 h-5" />
                 </div>
                 <div>
+                  <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-600/20 border border-red-500/30 text-[10px] font-bold text-red-400 uppercase tracking-wider mb-1">
+                    <Sparkles className="w-2.5 h-2.5" />
+                    <span>Instant Online Booking</span>
+                  </div>
                   <h3 className="text-lg font-bold text-white font-serif">
-                    Fast-Track on WhatsApp
+                    Book a Discovery Meeting
                   </h3>
-                  <p className="text-[11px] text-zinc-400">Average response time: &lt; 20 mins</p>
                 </div>
               </div>
               <p className="text-xs text-zinc-300 leading-relaxed mb-6">
-                Have an urgent shoot deadline or want to speak directly to our creative director? Chat with us instantly.
+                Pick a date & time that suits you on our studio calendar for a 1-on-1 discovery consultation to discuss your brand’s video production and social growth roadmap.
               </p>
               <a
-                href="https://wa.me/256700000000?text=Hi%20Koko%20Digital,%20I'd%20like%20to%20discuss%20a%20video%20production%20or%20social%20media%20project%20for%20my%20brand."
+                href="https://calendly.com/akankundavannessa7/koko-digital-meeting"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white text-xs font-bold shadow-lg shadow-red-700/40 flex items-center justify-center gap-2 transition-all active:scale-98"
+                className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white text-xs font-extrabold shadow-xl shadow-red-700/40 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-98"
               >
-                <span>Chat on Studio WhatsApp</span>
+                <Calendar className="w-4 h-4" />
+                <span>Schedule Discovery Meeting</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
 
-            {/* Studio Locations */}
+            {/* 2. Quick WhatsApp & Phone Action Box */}
+            <div className="p-7 rounded-3xl bg-[#221d25] border border-[#382e3c] shadow-xl relative">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+                    <MessageSquare className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-white font-serif">
+                      WhatsApp & Direct Call
+                    </h3>
+                    <p className="text-[11px] text-zinc-400">Response time: &lt; 20 mins</p>
+                  </div>
+                </div>
+                <span className="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-800/40">
+                  Online
+                </span>
+              </div>
+              
+              <div className="mb-5 p-3 rounded-xl bg-[#1b171e] border border-zinc-800 flex items-center justify-between">
+                <span className="text-[11px] text-zinc-400">Official Line:</span>
+                <a
+                  href="tel:+256790654575"
+                  className="text-xs font-bold font-mono text-white hover:text-red-400 transition-colors"
+                >
+                  +256 790 654575
+                </a>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <a
+                  href="https://wa.me/256790654575?text=Hi%20Koko%20Digital,%20I'd%20like%20to%20discuss%20a%20video%20production%20or%20social%20media%20project%20for%20my%20brand."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3 px-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-700/30 flex items-center justify-center gap-2 transition-all active:scale-98"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  <span>Chat WhatsApp</span>
+                </a>
+                <a
+                  href="tel:+256790654575"
+                  className="py-3 px-3.5 rounded-xl bg-[#2b2430] hover:bg-zinc-800 border border-[#3e3445] text-white text-xs font-bold flex items-center justify-center gap-2 transition-all active:scale-98"
+                >
+                  <Phone className="w-3.5 h-3.5 text-red-400" />
+                  <span>Direct Call</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Studio Locations & Direct Info */}
             <div className="space-y-4">
+              <div className="p-6 rounded-3xl bg-[#221d25] border border-[#362d3a] flex items-start gap-4">
+                <div className="w-10 h-10 rounded-2xl bg-red-600/15 border border-red-500/20 text-red-500 flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white font-serif">Direct Phone & WhatsApp</h4>
+                  <p className="text-xs text-zinc-400 mt-0.5 leading-relaxed">
+                    Direct studio line for calls, inquiries, and booking coordination:
+                  </p>
+                  <div className="flex flex-wrap items-center gap-3 mt-1.5">
+                    <a
+                      href="tel:+256790654575"
+                      className="text-xs font-bold text-white hover:text-red-400 font-mono transition-colors"
+                    >
+                      +256 790 654575
+                    </a>
+                    <span className="text-zinc-600">•</span>
+                    <a
+                      href="https://wa.me/256790654575?text=Hi%20Koko%20Digital,%20I'd%20like%20to%20discuss%20a%20project."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-bold text-emerald-400 hover:text-emerald-300 underline"
+                    >
+                      Chat on WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               <div className="p-6 rounded-3xl bg-[#221d25] border border-[#362d3a] flex items-start gap-4">
                 <div className="w-10 h-10 rounded-2xl bg-red-600/15 border border-red-500/20 text-red-500 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
@@ -213,23 +296,40 @@ export function ContactSection() {
                   <p className="text-xs sm:text-sm text-zinc-300 max-w-md mx-auto leading-relaxed">
                     Thank you for reaching out to Koko Digital Studio. Our creative director is reviewing your brand brief and will reach out via WhatsApp/Email within 24 hours.
                   </p>
-                  <button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setFormData({
-                        name: '',
-                        brand: '',
-                        email: '',
-                        phone: '',
-                        services: [],
-                        budget: '',
-                        message: '',
-                      });
-                    }}
-                    className="mt-4 px-6 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-bold text-zinc-200"
-                  >
-                    Send Another Project Brief
-                  </button>
+                  
+                  {/* Immediate Calendly Link for Faster Booking */}
+                  <div className="pt-2 pb-1">
+                    <a
+                      href="https://calendly.com/akankundavannessa7/koko-digital-meeting"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white text-xs font-bold shadow-lg shadow-red-700/40 transition-all active:scale-95"
+                    >
+                      <Calendar className="w-4 h-4" />
+                      <span>Lock In Your Discovery Meeting on Calendly Now</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+
+                  <div>
+                    <button
+                      onClick={() => {
+                        setSubmitted(false);
+                        setFormData({
+                          name: '',
+                          brand: '',
+                          email: '',
+                          phone: '',
+                          services: [],
+                          budget: '',
+                          message: '',
+                        });
+                      }}
+                      className="mt-2 px-6 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-bold text-zinc-200 transition-colors"
+                    >
+                      Send Another Project Brief
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -298,7 +398,7 @@ export function ContactSection() {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+256 700 000 000"
+                        placeholder="+256 790 654575"
                         className="w-full px-4 py-3 rounded-xl bg-[#2b2430] border border-[#3e3445] text-white text-xs placeholder-zinc-500 focus:outline-none focus:border-red-500 transition-colors"
                       />
                     </div>
