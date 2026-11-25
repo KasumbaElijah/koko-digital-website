@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Target, Zap, Volume2, Users, ArrowRight } from 'lucide-react';
 
 const METHOD_STEPS = [
@@ -119,13 +120,13 @@ export function MethodologySection() {
               We audit your current social channels and build a tailored short-form video roadmap on day one.
             </p>
           </div>
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="px-6 py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs shadow-lg shadow-red-700/40 hover:shadow-red-600/60 transition-all flex items-center gap-2 whitespace-nowrap active:scale-95"
           >
             <span>Claim Your Free Channel Audit</span>
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
 
       </div>

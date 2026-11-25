@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowRight, BarChart3, Sparkles, ChevronRight, Calendar, Phone } from 'lucide-react';
 import { assetPath } from '@/lib/utils';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,13 +28,13 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Work', href: '#work' },
-    { name: 'Services', href: '#services' },
-    { name: 'Methodology', href: '#methodology' },
-    { name: 'Packages', href: '#packages' },
-    { name: 'About', href: '#about' },
-    { name: 'Models', href: '#models' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Work', href: '/work' },
+    { name: 'Services', href: '/services' },
+    { name: 'Packages', href: '/packages' },
+    { name: 'Models', href: '/models' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -78,16 +80,26 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-1 bg-[#131317]/80 border border-zinc-800/80 rounded-full px-4 py-1.5 backdrop-blur-sm shadow-inner">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-xs font-semibold text-zinc-300 hover:text-white px-3.5 py-1.5 rounded-full transition-colors hover:bg-zinc-800/60"
-            >
-              {link.name}
-            </a>
-          ))}
+        <nav className="hidden md:flex items-center gap-1 bg-[#131317]/80 border border-zinc-800/80 rounded-full px-3 py-1.5 backdrop-blur-sm shadow-inner">
+          {navLinks.map((link) => {
+            const isActive =
+              link.href === '/'
+                ? pathname === '/'
+                : pathname?.startsWith(link.href);
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`text-xs font-semibold px-3.5 py-1.5 rounded-full transition-all ${
+                  isActive
+                    ? 'bg-red-600 text-white shadow-md shadow-red-900/40'
+                    : 'text-zinc-300 hover:text-white hover:bg-zinc-800/60'
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Action Buttons */}
@@ -143,18 +155,28 @@ export function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
           />
           <div className="relative z-50 md:hidden bg-[#151216] border-b border-red-950/60 px-6 py-6 space-y-4 shadow-2xl animate-slide-down">
-            <div className="flex flex-col space-y-2">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm font-semibold text-zinc-300 hover:text-red-400 py-2.5 border-b border-zinc-900 flex items-center justify-between transition-colors"
-                >
-                  <span>{link.name}</span>
-                  <ChevronRight className="w-4 h-4 text-zinc-600" />
-                </a>
-              ))}
+            <div className="flex flex-col space-y-1.5">
+              {navLinks.map((link) => {
+                const isActive =
+                  link.href === '/'
+                    ? pathname === '/'
+                    : pathname?.startsWith(link.href);
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`text-sm font-semibold py-2.5 px-3 rounded-xl border-b border-zinc-900 flex items-center justify-between transition-colors ${
+                      isActive
+                        ? 'bg-red-600/20 text-red-400 border-red-900/40'
+                        : 'text-zinc-300 hover:text-red-400'
+                    }`}
+                  >
+                    <span>{link.name}</span>
+                    <ChevronRight className="w-4 h-4 text-zinc-600" />
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="pt-2 flex flex-col gap-2.5">

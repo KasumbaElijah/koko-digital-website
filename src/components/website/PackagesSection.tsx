@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Check, Sparkles, Zap, Shield, ArrowRight, Calendar, Phone } from 'lucide-react';
 
 interface PricingTier {
@@ -157,8 +158,8 @@ export function PackagesSection() {
 
               {/* Bottom CTA Button */}
               <div className="mt-8 pt-6 border-t border-zinc-800/80">
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className={`w-full py-3.5 px-4 rounded-xl text-xs font-extrabold text-center flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-95 ${
                     tier.isPopular
                       ? 'bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white shadow-red-700/40 hover:shadow-red-600/60'
@@ -167,7 +168,7 @@ export function PackagesSection() {
                 >
                   <span>{tier.cta}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+                </Link>
               </div>
             </div>
           ))}

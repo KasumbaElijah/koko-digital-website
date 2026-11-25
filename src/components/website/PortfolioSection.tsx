@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Sparkles, Eye, TrendingUp, ArrowUpRight, CheckCircle2, Play, Flame, X } from 'lucide-react';
 
 interface CaseStudy {
@@ -391,13 +392,13 @@ export function PortfolioSection() {
                 >
                   Close
                 </button>
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   onClick={() => setSelectedCaseStudy(null)}
                   className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-red-700 text-white text-xs font-bold shadow-lg shadow-red-700/40 hover:from-red-500 hover:to-red-600"
                 >
                   Get Similar Results For Your Brand →
-                </a>
+                </Link>
               </div>
 
             </div>

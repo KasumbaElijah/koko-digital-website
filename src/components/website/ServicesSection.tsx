@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Video, Smartphone, Layers, GraduationCap, BarChart3, Sparkles, ArrowRight, Check } from 'lucide-react';
 import { assetPath } from '@/lib/utils';
 
@@ -205,13 +206,13 @@ export function ServicesSection() {
             </div>
 
             <div className="pt-6">
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="w-full py-3 px-4 rounded-xl bg-white hover:bg-zinc-200 text-black font-extrabold text-xs flex items-center justify-center gap-2 transition-all shadow-md active:scale-98"
               >
                 <span>Request Custom Retainer Proposal</span>
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Play, Pause, Volume2, Sparkles, TrendingUp, Heart, MessageCircle, Share2, Flame, ArrowRight, CheckCircle2, Calendar, Phone } from 'lucide-react';
 
 interface MockReel {
@@ -157,12 +158,12 @@ export function HeroSection() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-200" />
               </a>
 
-              <a
-                href="#work"
+              <Link
+                href="/work"
                 className="w-full sm:w-auto px-7 py-4 rounded-2xl text-sm font-bold text-zinc-200 hover:text-white bg-[#141418] hover:bg-zinc-800/90 border border-zinc-800 hover:border-red-700/60 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <span>Explore Client Work</span>
-              </a>
+              </Link>
             </div>
 
             {/* Quick Contact Bar */}
@@ -187,15 +188,13 @@ export function HeroSection() {
                 WhatsApp Us
               </a>
               <span className="text-zinc-600">•</span>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScv86tlfXWqADS5NY-IJXTWE_EZoN-HIB6eHq1QHsUBHBENtA/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/models"
                 className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-950/80 border border-rose-600/40 text-rose-300 hover:text-white hover:border-rose-500 font-bold transition-all"
               >
                 <Sparkles className="w-3 h-3 text-rose-400" />
-                <span>Models Wanted: Apply Here ↗</span>
-              </a>
+                <span>Models Wanted: Apply Here →</span>
+              </Link>
             </div>
 
             {/* Value Highlights */}

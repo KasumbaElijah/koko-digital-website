@@ -79,25 +79,16 @@ export function Footer() {
           {/* Col 3: Navigation */}
           <div className="space-y-3">
             <p className="text-xs font-bold text-white uppercase tracking-wider font-serif">
-              Agency
+              Agency Pages
             </p>
             <ul className="space-y-2 text-xs text-zinc-400">
-              <li><a href="#work" className="hover:text-red-400 transition-colors">Client Portfolio</a></li>
-              <li><a href="#services" className="hover:text-red-400 transition-colors">Creative Services</a></li>
-              <li><a href="#methodology" className="hover:text-red-400 transition-colors">The Koko Engine</a></li>
-              <li><a href="#packages" className="hover:text-red-400 transition-colors">Packages & Pricing</a></li>
-              <li><a href="#about" className="hover:text-red-400 transition-colors">Our Story & Team</a></li>
-              <li>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScv86tlfXWqADS5NY-IJXTWE_EZoN-HIB6eHq1QHsUBHBENtA/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-rose-400 hover:text-rose-300 font-semibold transition-colors flex items-center gap-1"
-                >
-                  <span>Model Casting Form</span>
-                  <span className="text-[10px]">↗</span>
-                </a>
-              </li>
+              <li><Link href="/" className="hover:text-red-400 transition-colors">Home</Link></li>
+              <li><Link href="/work" className="hover:text-red-400 transition-colors">Client Portfolio</Link></li>
+              <li><Link href="/services" className="hover:text-red-400 transition-colors">Creative Services</Link></li>
+              <li><Link href="/packages" className="hover:text-red-400 transition-colors">Packages &amp; Pricing</Link></li>
+              <li><Link href="/models" className="text-rose-400 hover:text-rose-300 font-semibold transition-colors">Models &amp; Casting</Link></li>
+              <li><Link href="/about" className="hover:text-red-400 transition-colors">Our Story &amp; Careers</Link></li>
+              <li><Link href="/contact" className="hover:text-red-400 transition-colors">Contact &amp; Project Brief</Link></li>
             </ul>
           </div>
 
