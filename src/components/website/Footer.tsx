@@ -92,24 +92,12 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Client Hub */}
+          {/* Col 4: Booking & Casting */}
           <div className="space-y-3">
             <p className="text-xs font-bold text-white uppercase tracking-wider font-serif">
-              Client Portal
+              Booking &amp; Talent
             </p>
             <ul className="space-y-2 text-xs text-zinc-400">
-              <li>
-                <Link href="/dashboard" className="flex items-center gap-1.5 hover:text-red-400 text-zinc-300 font-semibold transition-colors">
-                  <BarChart3 className="w-3.5 h-3.5 text-red-500" />
-                  <span>Social Analytics Portal</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/dashboard" className="hover:text-red-400 transition-colors">
-                  OAuth Integrations & API
-                </Link>
-              </li>
-              <li><Link href="/privacy" className="hover:text-red-400 transition-colors">Privacy Policy</Link></li>
               <li>
                 <a
                   href="https://calendly.com/akankundavannessa7/koko-digital-meeting"
@@ -121,6 +109,19 @@ export function Footer() {
                   <span className="text-[10px]">↗</span>
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScv86tlfXWqADS5NY-IJXTWE_EZoN-HIB6eHq1QHsUBHBENtA/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-rose-300 text-rose-400 font-semibold transition-colors flex items-center gap-1"
+                >
+                  <span>Model Casting Form</span>
+                  <span className="text-[10px]">↗</span>
+                </a>
+              </li>
+              <li><Link href="/about#careers" className="hover:text-red-400 transition-colors">Careers &amp; Hiring</Link></li>
+              <li><Link href="/privacy" className="hover:text-red-400 transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
 

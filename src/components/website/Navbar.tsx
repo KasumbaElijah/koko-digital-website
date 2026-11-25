@@ -104,16 +104,6 @@ export function Navbar() {
 
         {/* Action Buttons */}
         <div className="hidden lg:flex items-center gap-3">
-          {/* Client Portal Link to /dashboard */}
-          <Link
-            href="/dashboard"
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white bg-[#141418] hover:bg-zinc-800/90 border border-zinc-800 hover:border-red-900/60 transition-all group"
-            title="Open Client Social Analytics & Reporting"
-          >
-            <BarChart3 className="w-3.5 h-3.5 text-red-500 group-hover:scale-110 transition-transform" />
-            <span>Client Portal</span>
-          </Link>
-
           {/* Book Discovery Meeting CTA (Calendly) */}
           <a
             href="https://calendly.com/akankundavannessa7/koko-digital-meeting"
@@ -129,14 +119,6 @@ export function Navbar() {
 
         {/* Mobile Hamburger Button */}
         <div className="flex md:hidden items-center gap-2">
-          <Link
-            href="/dashboard"
-            className="p-2 rounded-lg bg-[#141418] text-zinc-300 border border-zinc-800 text-xs flex items-center gap-1"
-          >
-            <BarChart3 className="w-3.5 h-3.5 text-red-500" />
-            <span className="text-[10px] font-bold">Portal</span>
-          </Link>
-
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 rounded-lg bg-[#141418] text-zinc-300 hover:text-white border border-zinc-800 focus:outline-none"
@@ -211,15 +193,6 @@ export function Navbar() {
                 <Phone className="w-3.5 h-3.5 text-red-400" />
                 <span>Call Studio: +256 790 654575</span>
               </a>
-
-              <Link
-                href="/dashboard"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-2.5 rounded-xl text-center text-xs font-semibold text-zinc-300 bg-[#141418] hover:bg-zinc-800/80 border border-zinc-800 flex items-center justify-center gap-2 transition-all"
-              >
-                <BarChart3 className="w-4 h-4 text-red-500" />
-                <span>Access Client Analytics Portal</span>
-              </Link>
             </div>
           </div>
         </>
