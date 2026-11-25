@@ -31,6 +31,7 @@ export function Navbar() {
     { name: 'Methodology', href: '#methodology' },
     { name: 'Packages', href: '#packages' },
     { name: 'About', href: '#about' },
+    { name: 'Models', href: '#models' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -167,6 +168,17 @@ export function Navbar() {
                 <Calendar className="w-4 h-4" />
                 <span>Book a Discovery Meeting (Calendly)</span>
                 <ArrowRight className="w-4 h-4" />
+              </a>
+
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScv86tlfXWqADS5NY-IJXTWE_EZoN-HIB6eHq1QHsUBHBENtA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-2.5 rounded-xl text-center text-xs font-bold text-rose-200 bg-rose-950/60 hover:bg-rose-900/70 border border-rose-700/50 flex items-center justify-center gap-2 transition-all"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-rose-400" />
+                <span>Apply as a Model (Casting Form)</span>
               </a>
 
               <a

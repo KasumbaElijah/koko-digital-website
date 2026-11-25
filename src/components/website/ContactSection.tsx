@@ -277,6 +277,33 @@ export function ContactSection() {
                   </div>
                 </div>
               </div>
+
+              {/* Model Casting Call Quick Card */}
+              <div className="p-6 rounded-3xl bg-gradient-to-br from-rose-950/50 via-[#221d25] to-[#1c1720] border border-rose-600/40 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-2xl bg-rose-600/20 border border-rose-500/30 text-rose-400 flex items-center justify-center shrink-0">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <div className="w-full">
+                  <div className="flex items-center justify-between gap-2">
+                    <h4 className="text-sm font-bold text-white font-serif">Looking to Model for Us?</h4>
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-rose-600/20 text-rose-300 border border-rose-500/30">
+                      Casting Open
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-400 mt-1 mb-3 leading-relaxed">
+                    We are casting models &amp; on-camera talent for upcoming commercial reels and TikTok shoots.
+                  </p>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScv86tlfXWqADS5NY-IJXTWE_EZoN-HIB6eHq1QHsUBHBENtA/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold shadow-md shadow-rose-900/40 transition-all"
+                  >
+                    <span>Fill Out Model Casting Form</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
             </div>
 
           </div>

@@ -87,6 +87,17 @@ export function Footer() {
               <li><a href="#methodology" className="hover:text-red-400 transition-colors">The Koko Engine</a></li>
               <li><a href="#packages" className="hover:text-red-400 transition-colors">Packages & Pricing</a></li>
               <li><a href="#about" className="hover:text-red-400 transition-colors">Our Story & Team</a></li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScv86tlfXWqADS5NY-IJXTWE_EZoN-HIB6eHq1QHsUBHBENtA/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-rose-400 hover:text-rose-300 font-semibold transition-colors flex items-center gap-1"
+                >
+                  <span>Model Casting Form</span>
+                  <span className="text-[10px]">↗</span>
+                </a>
+              </li>
             </ul>
           </div>
 

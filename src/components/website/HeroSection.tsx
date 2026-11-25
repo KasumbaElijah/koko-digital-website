@@ -166,7 +166,7 @@ export function HeroSection() {
             </div>
 
             {/* Quick Contact Bar */}
-            <div className="flex items-center justify-center lg:justify-start gap-3 text-xs text-zinc-400">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs text-zinc-400">
               <span className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 Direct Studio Line:
@@ -185,6 +185,16 @@ export function HeroSection() {
                 className="text-emerald-400 hover:text-emerald-300 underline font-medium"
               >
                 WhatsApp Us
+              </a>
+              <span className="text-zinc-600">•</span>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScv86tlfXWqADS5NY-IJXTWE_EZoN-HIB6eHq1QHsUBHBENtA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-950/80 border border-rose-600/40 text-rose-300 hover:text-white hover:border-rose-500 font-bold transition-all"
+              >
+                <Sparkles className="w-3 h-3 text-rose-400" />
+                <span>Models Wanted: Apply Here ↗</span>
               </a>
             </div>
 

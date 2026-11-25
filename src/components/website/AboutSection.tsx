@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Award, Flame, Heart, Compass, ShieldCheck, Sparkles } from 'lucide-react';
+import { MapPin, Award, Flame, Heart, Compass, ShieldCheck, Sparkles, Camera, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { assetPath } from '@/lib/utils';
 
 export function AboutSection() {
@@ -140,6 +140,93 @@ export function AboutSection() {
               </div>
             );
           })}
+        </div>
+
+        {/* Official Model & On-Camera Talent Casting Call */}
+        <div id="models" className="mb-12 rounded-3xl bg-gradient-to-br from-[#2b1522] via-[#1f1622] to-[#17121a] border-2 border-red-600/70 p-8 sm:p-12 shadow-2xl relative overflow-hidden scroll-mt-24">
+          {/* Ambient Lighting Accents */}
+          <div className="absolute -top-10 right-10 w-72 h-72 bg-rose-600/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-10 w-64 h-64 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7 space-y-5">
+              <div className="flex items-center gap-3 flex-wrap">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#E60039] text-white text-xs font-black uppercase tracking-wider rounded-sm shadow-lg shadow-red-950/60">
+                  <Camera className="w-3.5 h-3.5" />
+                  <span>CASTING CALL • OPEN NOW</span>
+                </div>
+                <span className="text-xs font-mono font-bold text-rose-300 bg-rose-950/70 px-3 py-1 rounded-full border border-rose-700/40">
+                  Paid Brand Campaigns
+                </span>
+              </div>
+
+              <h3 className="text-3xl sm:text-5xl font-serif font-black text-white tracking-tight leading-[1.08]">
+                WE ARE LOOKING FOR{' '}
+                <span className="text-[#FF1E56] italic">MODELS</span> &amp; ON-CAMERA TALENT.
+              </h3>
+
+              <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-2xl">
+                Want to star in high-production 9:16 Reels, TikTok campaigns, and commercial brand shoots for East Africa’s top hospitality, lifestyle, luxury, and retail brands? Join the official Koko Digital Studio talent roster.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div className="flex items-center gap-2.5 text-xs text-zinc-200 bg-[#251b28]/90 px-4 py-3 rounded-xl border border-rose-900/40">
+                  <CheckCircle2 className="w-4 h-4 text-[#FF1E56] shrink-0" />
+                  <span>Lifestyle, Fashion &amp; Hospitality Shoots</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-xs text-zinc-200 bg-[#251b28]/90 px-4 py-3 rounded-xl border border-rose-900/40">
+                  <CheckCircle2 className="w-4 h-4 text-[#FF1E56] shrink-0" />
+                  <span>Expressive Energy &amp; Camera Confidence</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-xs text-zinc-200 bg-[#251b28]/90 px-4 py-3 rounded-xl border border-rose-900/40">
+                  <CheckCircle2 className="w-4 h-4 text-[#FF1E56] shrink-0" />
+                  <span>No Prior Agency Experience Required</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-xs text-zinc-200 bg-[#251b28]/90 px-4 py-3 rounded-xl border border-rose-900/40">
+                  <CheckCircle2 className="w-4 h-4 text-[#FF1E56] shrink-0" />
+                  <span>Flexible Shoot Schedules (Kampala &amp; Nairobi)</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="p-7 sm:p-8 rounded-2xl bg-[#1c141f]/95 border border-rose-500/40 shadow-xl space-y-5">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-[11px] uppercase font-extrabold tracking-widest text-rose-400">
+                      OFFICIAL TALENT ROSTER
+                    </p>
+                    <h4 className="text-xl font-bold text-white font-serif mt-1">
+                      Submit Your Model Profile
+                    </h4>
+                  </div>
+                  <img
+                    src={assetPath('/images/koko-avatar.png')}
+                    alt="Koko Digital Studio"
+                    className="w-11 h-11 rounded-full border border-white/15 shadow-md"
+                  />
+                </div>
+
+                <p className="text-xs text-zinc-300 leading-relaxed">
+                  Fill out our official casting registration form with your details, social handles, and photos so our creative directors can match you with upcoming client shoots.
+                </p>
+
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScv86tlfXWqADS5NY-IJXTWE_EZoN-HIB6eHq1QHsUBHBENtA/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[#E60039] via-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white text-xs sm:text-sm font-extrabold shadow-xl shadow-red-900/50 flex items-center justify-center gap-2.5 transition-all hover:scale-[1.02] active:scale-95 group"
+                >
+                  <span>Apply via Model Casting Form</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                <p className="text-[11px] text-zinc-400 text-center">
+                  Opens official Google Form • Takes less than 3 minutes
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Official Studio Hiring Spotlight — Directly from the Studio Poster */}
